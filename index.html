@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>WebGIS Kerentanan Banjir Situbondo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 <body>
     <!--HEADER-->
@@ -20,7 +26,7 @@
         <i class="fa-solid fa-bars" id="menu-icon"></i>
         <nav class="navbar">  
             <a href="#home">Home</a>
-            <a href="#about">About</a>
+            <a href="#tentang">Tentang</a>
             <a href="#services">Map</a>
         </nav>
     </header>
@@ -32,14 +38,14 @@
             <h2>Presented By: <span class="multiple-text"></span></h2>
         </div>
     </section>
-    <!--ABOUT SECTION-->
-    <section class="about" id="about">
-        <div class="about-img">
+    <!--TENTANG SECTION-->
+    <section class="tentang" id="tentang">
+        <div class="tentang-img">
             <img src="images/gif1.gif" alt="">
         </div>
 
-        <div class="about-content">
-            <h2 class="heading">About <span>Situbondo</span></h2>
+        <div class="tentang-content">
+            <h2 class="heading">Tentang <span>Situbondo</span></h2>
             <p> Banjir sering terjadi di Indonesia, termasuk di Kabupaten Situbondo yang mengalami banjir tahunan akibat hujan deras dan sungai yang meluap. Wilayah perkotaan Situbondo sering terkena banjir karena topografinya cekung, meskipun ada upaya normalisasi sungai dan selokan. Curah hujan yang tinggi dari daerah hulu Kabupaten Bondowoso juga berkontribusi dalam menyebabkan banjir. Penelitian menggunakan GIS dilakukan untuk mengetahui tingkat kerentanan banjir dengan data ketinggian, kelerengan, jarak dari sungai, limpasan air, dan curah hujan, disajikan melalui WebGIS<br> 
                 <br>Jelajahi berbagai lapisan, informasi rinci tentang risiko banjir, dan peta interaktif untuk memahami kerentanan di berbagai wilayah.
             </p>
@@ -107,7 +113,7 @@
                             return this._div;
                         };
                         title.update = function () {
-                            this._div.innerHTML = '<h2>Webgis Kerentanan Banjir Kabupaten Situbondo</h2>';
+                            this._div.innerHTML = '<h2>Peta Kerentanan Banjir</h2>';
                         };
                         title.addTo(map);
             
@@ -185,7 +191,7 @@
                                         weight: 1.0, 
                                         fill: true,
                                         fillOpacity: 1,
-                                        fillColor: 'rgba(81,202,97,1.0)',
+                                        fillColor: 'rgba(234,167,107,1.0)',
                                         interactive: true,
                                     };
                                 case 'Sangat Rawan':
@@ -199,12 +205,11 @@
                                         weight: 1.0, 
                                         fill: true,
                                         fillOpacity: 1,
-                                        fillColor: 'rgba(205,24,54,1.0)',
+                                        fillColor: 'rgba(214,65,65,1.0)',
                                         interactive: true,
                                     };
                             }
                         }
-            
                         map.createPane('pane_kerentananbanjir_1');
                         map.getPane('pane_kerentananbanjir_1').style.zIndex = 401;
                         map.getPane('pane_kerentananbanjir_1').style['mix-blend-mode'] = 'normal';
@@ -219,31 +224,42 @@
                         });
                         bounds_group.addLayer(layer_kerentananbanjir_1);
                         map.addLayer(layer_kerentananbanjir_1);
-            
-                        var baseMaps = {};
-                        var overlaysTree = [
-                            {label: 'kerentanan banjir<br /><table><tr><td style="text-align: center;"><img src="legend/kerentananbanjir_1_TidakRentan0.png" /></td><td>Tidak Rentan</td></tr><tr><td style="text-align: center;"><img src="legend/kerentananbanjir_1_CukupRentan1.png" /></td><td>Cukup Rentan</td></tr><tr><td style="text-align: center;"><img src="legend/kerentananbanjir_1_Rentan2.png" /></td><td>Rentan</td></tr><tr><td style="text-align: center;"><img src="legend/kerentananbanjir_1_SangatRentan3.png" /></td><td>Sangat Rentan</td></tr></table>', layer: layer_kerentananbanjir_1},
-                            {label: "OSM Standard", layer: layer_OSMStandard_0},
-                        ];
-                        var lay = L.control.layers.tree(null, overlaysTree, {
-                            collapsed: false, 
-                        });
-                        lay.addTo(map);
                         setBounds();
                     </script>
                 </div>
             </div>
         </div>
     </section>
-
-    <footer class="footer">
-        <div class="footer-text">
-            <p>&copy; KELOMPOK 4 - Sistem Informasi Perencanaan D - PWK ITS</p>
+    <!--ANGGOTA SECTION-->
+    <section class="anggota" id="anggota">
+        <h2 class="heading">Anggota <span>Kelompok 4</span></h2>
+        <div class="anggota-container">
+            <div class="anggota-box">
+                <h3>Nama Anggota 1</h3>
+                <p>Deskripsi singkat tentang anggota 1.</p>
+            </div>
+            <div class="anggota-box">
+                <h3>Nama Anggota 2</h3>
+                <p>Deskripsi singkat tentang anggota 2.</p>
+            </div>
+            <div class="anggota-box">
+                <h3>Nama Anggota 3</h3>
+                <p>Deskripsi singkat tentang anggota 3.</p>
+            </div>
+            <div class="anggota-box">
+                <h3>Nama Anggota 4</h3>
+                <p>Deskripsi singkat tentang anggota 4.</p>
+            </div>
+            <div class="anggota-box">
+                <h3>Nama Anggota 5</h3>
+                <p>Deskripsi singkat tentang anggota 5.</p>
+            </div>
         </div>
+    </section>
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2024 Kelompok 4. All rights reserved.</p>
     </footer>
-    
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
