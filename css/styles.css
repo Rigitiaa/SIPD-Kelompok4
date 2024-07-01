@@ -91,13 +91,14 @@ section {
 
 /* Pengaturan judul h3 pada home */
 .home-content h3 {
-    font-size: 8rem; /* Ukuran font h3 */
+    font-size: 5rem; /* Ukuran font h3 */
     font-weight: 700; /* Ketebalan font h3 */
+    padding: 10px;
 }
 
 /* Pengaturan judul h1 pada home */
 .home-content h1 {
-    font-size: 6rem; /* Ukuran font h1 */
+    font-size: 3rem; /* Ukuran font h1 */
     font-weight: 700; /* Ketebalan font h1 */
     line-height: 1.3; /* Line-height 1.3 */
 }
@@ -213,5 +214,5 @@ span {
 
 #map {
     width: 100%;
-    height: 100vh;
+    height: 100vh;
 }
